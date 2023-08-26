@@ -1,0 +1,6 @@
+[
+{
+  "directory": "c:\\Users\\cullv\\Projects\\cengine",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/std:c++17", "/Isrc", "/EHsc", "/Fobuild\\.objs\\argent\\windows\\x64\\debug\\src\\graphics\\instance.cpp.obj", "src\\graphics\\instance.cpp"],
+  "file": "src\\graphics\\instance.cpp"
+}]

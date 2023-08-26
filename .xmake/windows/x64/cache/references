@@ -1,0 +1,9 @@
+{
+    packages = {
+        [[C:\Users\cullv\AppData\Local\.xmake\packages\o\opengl\latest\8574311f4b544fa89a3d8c3ee79d1929]],
+        [[C:\Users\cullv\AppData\Local\.xmake\packages\g\glfw\3.3.8\d12e591897c9472fb7d3725fa5811388]],
+        [[C:\Users\cullv\AppData\Local\.xmake\packages\n\nlohmann_json\v3.11.2\d18ecf552d7148eeb73c26c13078fb10]],
+        [[C:\Users\cullv\AppData\Local\.xmake\packages\s\stb\2023.01.30\87edd883faeb4b168400e7458251d335]],
+        [[C:\Users\cullv\AppData\Local\.xmake\packages\t\tinygltf\v2.8.13\6bcdf235d88d4e27bb4d4d14953b19ae]]
+    }
+}
