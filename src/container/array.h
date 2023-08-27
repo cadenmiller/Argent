@@ -1,6 +1,7 @@
 #ifndef ARGENT_CONTAINER_ARRAY_H
 #define ARGENT_CONTAINER_ARRAY_H
 
+#include <stdint.h>
 #include <memory.h>
 
 namespace Argent {
