@@ -1,6 +1,0 @@
-#ifndef SILVER_ENGINE_H
-#define SILVER_ENGINE_H
-
-
-
-#endif // SILVER_ENGINE_H

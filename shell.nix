@@ -1,17 +1,14 @@
-{ pkgs ? import <nixpkgs> {} }:
+{pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   name = "env";
-  packages = with pkgs;
-  let unstable = import <nixos-unstable> {};
-  in [
-
+  packages = with pkgs; [
     # Build requirements
     git
     gnumake
-    gcc
+    clang
     gdb
     readline
-    unstable.xmake
+    cmake
 
     # Vulkan
     vulkan-headers
@@ -26,7 +23,7 @@ pkgs.mkShell {
     xorg.libXinerama
     xorg.libXcursor
     xorg.libXi
-    
+
     # Wayland
     wayland
     wayland-protocols
