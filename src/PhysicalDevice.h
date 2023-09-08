@@ -17,7 +17,7 @@ public:
      * @return uint32_t The unique id of this physical device on this system alone. 
      *
      */
-    virtual uint32_t            GetUID();
+    [[nodiscard]] virtual uint32_t            GetUID();
 
     /**
      * @brief Returns the name of the physical device listed by the driver.
@@ -27,7 +27,7 @@ public:
      *
      * @return std::string_view The name of this physical device.
      */
-    virtual std::string_view    GetName();
+    [[nodiscard]] virtual std::string_view    GetName();
 
     /**
      * @brief Returns the name of the physical devices vendor by the driver.
@@ -38,7 +38,7 @@ public:
      * 
      * @return std::string_view The name of this physical devices vendor. 
      */
-    virtual std::string_view    GetVendorName();
+    [[nodiscard]] virtual std::string_view    GetVendorName();
 
 protected:
 
@@ -46,7 +46,7 @@ protected:
     PhysicalDevice() = default; 
     ~PhysicalDevice() = default;
 
-    friend class Instance;
+    friend class InstanceOpenGL;
 };
 
 } // namespace Ar

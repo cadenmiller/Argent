@@ -8,7 +8,7 @@
 namespace Ar {
 
 struct InstanceCapabilities {
-    bool requireSelectPhysicalDevice; /** @brief If this instance requires a physical device select. */
+    bool bSelectPhysicalDevice; /** @brief If this instance requires a physical device select. */
 };
 
 class Instance {
@@ -28,7 +28,7 @@ public:
      *
      */
     virtual void GetCapabilities(
-            InstanceCapabilities& capabilities);
+            InstanceCapabilities* pCapabilities);
 
     /**
      * @brief Returns all physical devices in the system.
@@ -48,10 +48,15 @@ public:
      * @brief Uses this physical device for all future graphics operations. 
      *
      * Chooses a physical device for graphics operations such as buffer 
-     * creation, and rendering. 
+     * creation, and rendering. Some drivers require a physical device to
+     * be chosen.
+     *
+     * @return bool True on success and false on failure.
+     * 
      */
     [[nodiscard]] virtual bool SelectPhysicalDevice(
             PhysicalDevice* pPhysicalDevice);
+
 };
 
 } // namespace Ar

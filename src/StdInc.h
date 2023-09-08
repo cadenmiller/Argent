@@ -4,6 +4,7 @@
 #include <cstdint>
 
 #include <vector>
+#include <string>
 #include <string_view>
 
 #endif // ARGENT_STDINC_H

@@ -9,6 +9,7 @@ pkgs.mkShell {
     gdb
     readline
     cmake
+    glm
 
     # Vulkan
     vulkan-headers

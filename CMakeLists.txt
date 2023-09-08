@@ -40,6 +40,34 @@ message("\tARGENT_DRIVER_USE_DX11 = ${ARGENT_DRIVER_USE_DX11}")
 #####
 
 find_package(Vulkan REQUIRED)
+find_package(glm REQUIRED)
 
+#####
+# Build libraries.
+#####
+add_subdirectory("libs")
 
-add_library(argent STATIC "src/Instance.cpp")
+#####
+# Determine sources for argent based on options.
+#####
+
+set(argentSources "")
+
+if (ARGENT_DRIVER_USE_OPENGL)
+  list(APPEND argentSources
+    "src/GL/InstanceGL.cpp")
+endif()
+
+add_library(argent STATIC ${argentSources})
+
+#####
+# Argent set target include directories.
+#####
+
+target_include_directories(argent PUBLIC "src/")
+
+#####
+# Link libraries for argent.
+#####
+
+target_link_libraries(argent glad)
